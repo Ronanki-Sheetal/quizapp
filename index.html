@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f6f1" />
+    <title>SJQ Sheetal's Java Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <header class="topbar">
+        <a class="brand" href="index.html" aria-label="SJQ Sheetal's Java Quiz home">
+          <span class="brand-mark" aria-hidden="true">SJQ</span>
+          <span class="brand-light">Sheetal's Java Quiz</span>
+        </a>
+        <div class="topbar-note"><span class="status-dot"></span> QUICK CODE QUIZ</div>
+      </header>
+
+      <main class="quiz-layout">
+        <section class="quiz-main" aria-labelledby="page-title">
+          <div class="intro-row">
+            <div>
+              <p class="eyebrow">JAVA FUNDAMENTALS <span>·</span> 8 QUESTIONS</p>
+              <h1 id="page-title">A little Java,<br /><span>a little challenge.</span></h1>
+            </div>
+          </div>
+
+          <div class="quiz-card" id="quiz-card">
+            <div id="quiz-progress-header">
+              <div class="quiz-topline">
+                <span class="question-count" id="question-count">QUESTION 01 <span>/ 08</span></span>
+                <span class="topic-tag" id="topic-tag">Basics</span>
+              </div>
+              <div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0">
+                <span class="progress-fill" id="progress-fill"></span>
+              </div>
+            </div>
+
+            <div id="question-view" aria-live="polite">
+              <h2 class="question-text" id="question-text"></h2>
+              <pre class="code-block" id="code-block" hidden><code></code></pre>
+              <div class="answers" id="answers" role="group" aria-label="Answer choices"></div>
+              <div class="quiz-actions">
+                <span class="answer-hint">Choose an answer to continue</span>
+                <button class="next-button" id="next-button" type="button" disabled>
+                  <span id="next-label">Next question</span><span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="results-view" id="results-view" hidden aria-live="polite">
+              <div class="result-icon" id="result-icon" aria-hidden="true">✓</div>
+              <p class="eyebrow">QUIZ COMPLETE</p>
+              <h2 id="result-title">Nice work.</h2>
+              <p class="result-copy" id="result-copy"></p>
+              <button class="next-button review-button" id="review-button" type="button">Analyze each question <span aria-hidden="true">→</span></button>
+              <button class="next-button restart-button" id="restart-button" type="button">Try again <span aria-hidden="true">↻</span></button>
+            </div>
+
+            <div class="review-view" id="review-view" hidden aria-live="polite">
+              <div class="review-heading">
+                <p class="eyebrow">QUESTION ANALYSIS</p>
+                <span class="review-count" id="review-count"></span>
+              </div>
+              <h2 class="question-text" id="review-question"></h2>
+              <pre class="code-block" id="review-code" hidden><code></code></pre>
+              <div class="review-answers" id="review-answers" aria-label="Answer analysis"></div>
+              <div class="feedback review-explanation" id="review-explanation"></div>
+              <div class="review-actions">
+                <button class="review-nav" id="review-previous" type="button">← Previous</button>
+                <button class="next-button" id="review-next" type="button"><span id="review-next-label">Next question</span><span aria-hidden="true">→</span></button>
+              </div>
+              <button class="review-back" id="review-back" type="button">Back to results</button>
+            </div>
+          </div>
+
+          <p class="footer-note"><span class="footer-spark" aria-hidden="true">✳</span> Small steps. Stronger code.</p>
+        </section>
+
+        <aside class="score-panel" aria-label="Quiz score">
+          <div class="score-panel-top">
+            <span class="score-label">FINAL SCORE</span>
+            <span class="score-symbol" aria-hidden="true">✳</span>
+          </div>
+          <div class="score-value"><span id="score">—</span><span class="score-total"> / 8</span></div>
+          <p class="score-caption">shown after the quiz</p>
+          <div class="score-divider"></div>
+          <div class="score-stat"><span>Answered</span><strong id="answered-count">0 / 8</strong></div>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
